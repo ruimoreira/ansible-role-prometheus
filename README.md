@@ -1,7 +1,9 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Role that aims to install prometheus on debian
+
+https://kifarunix.com/install-and-configure-prometheus-on-debian-9/
 
 Requirements
 ------------
@@ -13,11 +15,10 @@ good idea to mention in this section that the boto package is required.
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including
-any variables that are in defaults/main.yml, vars/main.yml, and any variables
-that can/should be set via parameters to the role. Any variables that are read
-from other roles and/or the global scope (ie. hostvars, group vars, etc.) should
-be mentioned here as well.
+prometheus_user: user we want to run the service undert
+
+prometheus_user_shell: prometheus user shell, it's /bin/false by default
+
 
 Dependencies
 ------------
@@ -44,5 +45,6 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a
-website (HTML is not allowed).
+Name: Rui Moreira
+Website: https://ruimoreira.co.uk
+email: ruimoreira29@gmail.com

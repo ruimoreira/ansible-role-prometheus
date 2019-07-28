@@ -1,0 +1,15 @@
+---
+
+- name: create /etc/prometheus
+  file:
+    path: "{{ prometheus_etc_dir }}"
+    state: directory
+    owner: prometheus
+    group: prometheus
+
+- name: create prometheus database
+  file:
+    path: "{{ prometheus_db_dir }}"
+    state: directory
+    owner: prometheus
+    group: prometheus
