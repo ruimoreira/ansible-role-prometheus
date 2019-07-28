@@ -39,3 +39,13 @@
     dest: "{{ prometheus_etc_dir }}/prometheus.yml"
     owner: "{{ prometheus_user }}"
     group: "{{ prometheus_user }}"
+
+- name: set systemd unit file
+  template:
+    src: templates/prometheus.service.j2
+    dest: /etc/systemd/system/prometheus.service
+    owner: root
+    group: root
+  notify: enable service
+
+- meta: flush_handlers

@@ -59,3 +59,10 @@ def test_prometheus_config_file(host):
     assert prmcfg.exists
     assert prmcfg.is_file
     assert prmcfg.user == 'prometheus'
+
+
+def test_systemd_unit(host):
+    systemdfile = host.file("/etc/systemd/system/prometheus.service")
+    assert systemdfile.exists
+    assert systemdfile.is_file
+    assert systemdfile.user == 'root'

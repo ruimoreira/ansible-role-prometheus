@@ -7,7 +7,7 @@
     owner: prometheus
     group: prometheus
 
-- name: create prometheus database
+- name: create prometheus database directory
   file:
     path: "{{ prometheus_db_dir }}"
     state: directory

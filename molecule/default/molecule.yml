@@ -3,13 +3,18 @@ dependency:
   name: galaxy
 driver:
   name: docker
+  cap_add: [SYS_ADMIN]
 lint:
   name: yamllint
 platforms:
   - name: instance
     image: debian:buster
+    privileged: True
+    volume: /sys/fs/cgroup
+    command: /sbin/init
 provisioner:
   name: ansible
+  log: true
   lint:
     name: ansible-lint
 verifier:

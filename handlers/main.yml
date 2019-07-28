@@ -1,2 +1,9 @@
 ---
 # handlers file for ansible-role-prometheus
+
+- name: enable service
+  systemd:
+    name: prometheus
+    daemon-reload: yes
+    enabled: yes
+    state: started
