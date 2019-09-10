@@ -3,13 +3,13 @@
 - name: create prometheus group
   group:
     name: "{{ prometheus_user }}"
-    gid: 999
+    gid: 9999
     state: present
 
 - name: create prometheus user
   user:
     name: "{{ prometheus_user }}"
     comment: prometheus service user
-    uid: 999
+    uid: 9999
     shell: /bin/false
     group: "{{ prometheus_user }}"
