@@ -1,9 +1,13 @@
-Role Name
+Ansible-Role-Prometheus
 =========
 
 Role that aims to install prometheus on debian
 
 https://kifarunix.com/install-and-configure-prometheus-on-debian-9/
+
+Build Status
+------------
+[![Build Status](https://travis-ci.org/ruimoreira/ansible-role-prometheus.svg?branch=master)](https://travis-ci.org/ruimoreira/ansible-role-prometheus)
 
 Requirements
 ------------
