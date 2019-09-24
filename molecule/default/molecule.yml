@@ -10,7 +10,11 @@ platforms:
   - name: instance
     image: debian:buster
     privileged: True
-    volume: /sys/fs/cgroup
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
     command: /sbin/init
 provisioner:
   name: ansible

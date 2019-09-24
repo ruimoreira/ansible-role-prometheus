@@ -17,7 +17,7 @@ def test_hosts_file(host):
 def test_prometheus_group(host):
     prometheus_group = host.group('prometheus')
     assert prometheus_group.exists
-    assert prometheus_group.gid == 999
+    assert prometheus_group.gid == 9999
 
 
 def test_prometheus_user(host):
