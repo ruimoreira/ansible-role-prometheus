@@ -50,5 +50,7 @@ Author Information
 ------------------
 
 Name: Rui Moreira
+
 Website: https://ruimoreira.co.uk
+
 email: ruimoreira29@gmail.com
