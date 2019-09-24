@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-role-prometheus
+
+- include_tasks: create_users.yml
+- include_tasks: setup_directories.yml
+- include_tasks: install_packages.yml

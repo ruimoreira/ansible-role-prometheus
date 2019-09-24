@@ -1,0 +1,27 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+  cap_add: [SYS_ADMIN]
+lint:
+  name: yamllint
+platforms:
+  - name: instance
+    image: debian:buster
+    privileged: True
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    command: /sbin/init
+provisioner:
+  name: ansible
+  log: true
+  lint:
+    name: ansible-lint
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

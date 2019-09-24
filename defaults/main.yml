@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-role-prometheus
+prometheus_user: "prometheus"
+prometheus_user_shell: /bin/false
+prometheus_etc_dir: "/etc/prometheus"
+prometheus_db_dir: "/var/lib/prometheus"
